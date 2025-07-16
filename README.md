@@ -11,7 +11,6 @@ northwind-sql-analysis/
 ├── analysis/ # Business-style insights in plain language
 ├── schema/ # Database diagram
 └── README.md # Project overview
-
 ```
 
 ## 🎯 Goals
