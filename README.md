@@ -4,12 +4,12 @@ This project simulates a real-world business data analysis using the classic Nor
 
 ## 📁 Project Structure
 
-northwind-sql-analysis/
+```northwind-sql-analysis/
 ├── database/ # SQLite database file
 ├── queries/ # All SQL scripts by theme
 ├── analysis/ # Business-style insights in plain language
 ├── schema/ # Database diagram
-└── README.md # Project overview
+└── README.md # Project overview```
 
 ## 🎯 Goals
 
