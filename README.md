@@ -10,6 +10,7 @@ northwind-sql-analysis/
 ├── queries/ # All SQL scripts by theme
 ├── analysis/ # Business-style insights in plain language
 ├── schema/ # Database diagram
+├── screenshots/               # Query output screenshots (query + result)
 └── README.md # Project overview
 ```
 
