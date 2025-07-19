@@ -2,7 +2,7 @@
 
 SELECT
 	strftime('%m', orders.OrderDate) AS month,
-	SUM(UnitPrice * Quantity * (1 - Discount)) AS revenue
+	ROUND(SUM(UnitPrice * Quantity * (1 - Discount)), 2) AS revenue
 	FROM "Order Details" order_details
 	JOIN Orders orders
 	ON order_details.OrderID = orders.OrderID
@@ -24,6 +24,7 @@ SELECT orders.OrderID,
 GROUP BY orders.OrderID
 )
 GROUP BY month
+ORDER BY avg_order_value DESC
 
 -- Month with the highest number of orders
 

@@ -23,7 +23,7 @@ ORDER BY "Number of Customers" DESC
 
 --Average order count per customer
 
-SELECT AVG(order_count) AS "Average Orders Per Customer"
+SELECT ROUND(AVG(order_count), 2) AS "Average Orders Per Customer"
 	FROM(
 SELECT CustomerID,
 	   COUNT(DISTINCT OrderID) AS order_count
@@ -50,7 +50,7 @@ ORDER BY order_count DESC
 -- Top 3 cities by total sales value
 
 SELECT 	customers.City,
-		SUM(UnitPrice * Quantity * (1- Discount)) AS revenue
+		ROUND(SUM(UnitPrice * Quantity * (1- Discount)),2) AS revenue
 	FROM "Order Details" order_details
 	JOIN Orders orders
 	ON order_details.OrderID = orders.OrderID
